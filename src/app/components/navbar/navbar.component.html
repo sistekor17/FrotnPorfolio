@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-md fixed-top">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar-toggler">
+      <a class="navbar-brand" href="#">
+        <img src="assets\images\icon.png" alt="Icono">
+      </a>
+    <!-- Text elements -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">
+            <h3>Porfolio Argentina programa </h3>
+          </a>
+        </li>
+      </ul>
+      <a class="nav-link" aria-current="Linkedin" href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a class="nav-link" aria-current="Facebook" href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a class="nav-link" aria-current="Twitter" href="#"><i class="fa-brands fa-twitter"></i></a>        
+      <form class="d-flex">
+        <button class="btn btn-outline-dark button__login" 
+                type="submit"
+                (click)="login()"
+                *ngIf = "!isLogged"> INGRESAR
+        </button>
+        <button class="btn btn-outline-dark button__login" 
+                type="submit"
+                (click)="onLogOut()"
+                *ngIf = "isLogged"> CERRAR SESION
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,63 @@
+
+<div class = "separacion" *ngIf="showAddExp">
+  <div class="container">
+   <div class="row gx-5">
+    <div class="col-lg-12  borde__sombreadofilas" >
+      <div class="container">
+        
+           
+                <!-- Contenido del formulario -->
+                <div class="pb-4 pt-4 ps-3 pe-3 ">  
+                  
+                  <h4 class="modal-title d-flex justify-content-between " id="formulario-flotante-label" *ngIf="showAddExp">Añadir Experiencia <button class="fa-solid fa-xmark button btn button__pencil" style="color: #ff0000;"(click) = "toggleShowAddExp()"></button></h4>
+            
+               
+                  <hr>
+                  <form
+                  (ngSubmit)="onSubmitExp()"
+                  >
+
+                    <!-- Empresa input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form6Example3">Empresa</label>
+                      <input type="text" name = "empresa" id="form6Example3" class="form-control" placeholder="Nombre de la empresa" [(ngModel)]="empresa"/>
+                      
+                    </div>
+                     <!-- Puesto input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form6Example3">Puesto de Trabajo</label>
+                      <input type="text"  name = "puesto" id="form6Example3" class="form-control" placeholder="Añada puesto de trabajo" [(ngModel)]="puesto" />  
+                    </div> 
+        
+                    <!-- Inicio input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form6Example3">Inicio</label>
+                      <input type="text" name = "inicio" id="form6Example3" class="form-control" placeholder="aaaa-mm-dd" [(ngModel)]="inicio" />  
+                    </div>
+        
+                    <!-- Fin input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form6Example3">Fin</label>
+                      <input type="text" name = "fin" id="form6Example3" class="form-control" placeholder="aaaa-mm-dd" [(ngModel)]="fin" />  
+                    </div>
+                   <!-- Imagen input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form6Example3">Imagen</label>
+                      <input type="text" name = "imagen" id="form6Example3" class="form-control" placeholder="URl de de imagen o logo de la empresa" [(ngModel)]="imagen" /> {{imagen}}
+                    </div>
+                    
+                    <!-- Descripcion input -->
+                    <div class="form-outline mb-4">
+                    <label class="form-label" for="form6Example7">
+                     Descripcion de la experiencia laboral</label>
+                    <textarea class="form-control" id="form6Example7" rows="4" name =descripcion [(ngModel)]="descripcion"></textarea>
+                    </div>
+                    
+                    <input type = "submit" value="Crear"  class = "btn btn-outline-dark btn-lg">
+                  </form>
+                </div>  
+         </div>
+      </div>
+     </div>
+    </div>
+  </div>

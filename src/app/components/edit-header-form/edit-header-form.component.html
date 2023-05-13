@@ -1,0 +1,61 @@
+<div class = "separacion" *ngIf="showEditHeader">
+  <div class="container">
+   <div class="row gx-5">
+    <div class="col-lg-12  borde__sombreadofilas" >
+      <div class="container">
+        
+           
+                <!-- Contenido del formulario -->
+                <div class="pb-4 pt-4 ps-3 pe-3 ">  
+                  
+                  <h4 class="modal-title d-flex justify-content-between " id="formulario-flotante-label">Editar Perfil<button class="fa-solid fa-xmark button btn button__pencil" style="color: #ff0000;" (click)="ontShowEditHeader()"></button></h4>
+            
+                  <hr>
+                  <form
+                  (ngSubmit)="onSubmitPerfil()"
+                  >
+
+                    <!-- Nombre input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form6Example3">Nombre Usuario</label>
+                      <input type="text" name = "nombre" id="form6Example3" class="form-control" placeholder="Nombre completo del usuario" [(ngModel)]="nombre"/>
+                      
+                    </div>
+                     <!-- Titulo input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form6Example3">Titulo</label>
+                      <input type="text"  name = "titulo" id="form6Example3" class="form-control" placeholder="Añada titulo del usuario" [(ngModel)]="titulo" />  
+                    </div> 
+        
+                    <!-- Sobre mi input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form6Example3">Sobre Mi</label>
+                      <textarea class="form-control" id="form6Example7" rows="4" name =sobreMi [(ngModel)]="sobreMi"></textarea>  
+                    </div>
+        
+                    <!-- Banner input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form6Example3">Banner</label>
+                      <input type="text" name = "Banner" id="form6Example3" class="form-control" placeholder="Url de imagen de fondo" [(ngModel)]="banner" />  
+                    </div>
+
+                   <!-- Imagen Perfil input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form6Example3">Imagen de Perfil</label>
+                      <input type="text" name = "img" id="form6Example3" class="form-control" placeholder="URl de de imagen o logo del usuario" [(ngModel)]="img" />
+                    </div>
+                    
+                    <!-- Curriculum Perfil input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form6Example3">Curriculum</label>
+                      <input type="text" name = "curriculum" id="form6Example3" class="form-control" placeholder="URl de curriculum del usuario" [(ngModel)]="curriculum" /> 
+                    </div>
+                    
+                    <input type = "submit" value="Editar"  class = "btn btn-outline-dark btn-lg">
+                  </form>
+                </div>  
+         </div>
+      </div>
+     </div>
+    </div>
+  </div>

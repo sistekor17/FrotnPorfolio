@@ -1,0 +1,9 @@
+.separacion{
+  position: absolute;
+  z-index: +1;
+  width: 70%;
+  margin-left: 5em;
+ margin-right: 7em;
+  height: auto;
+  
+}

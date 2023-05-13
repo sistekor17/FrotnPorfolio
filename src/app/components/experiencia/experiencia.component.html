@@ -1,0 +1,44 @@
+
+<div class = "separacion">
+  <div class="container">
+    <div class="row gx-5">
+      <div class="col-lg-12 borde__sombreado" >
+        <div class="row gx-5">
+          <div class = col-lg-11>
+
+            <h2>Experiencia</h2>
+            
+          </div>
+          <div class = "col-lg-1  d-flex justify-content-end">
+            <div><button class = "button btn button__pencil" type="button"  (click)="toggleShowAddEp()"><i class="bi bi-plus-square-fill"></i></button> </div></div>
+        </div>
+            <app-exp-modulo
+            class=" justify-content-center"
+            (onAddExp)="create($event)"
+            ></app-exp-modulo>
+            <app-edit-form 
+            (onEditExp)="edit(idEdit, $event)"
+            ></app-edit-form>
+      <div class="container borde__filas "> 
+        <div class ="row gx-5 borde__sombreadofilas " *ngFor = "let experiencia of experiencias">
+          <div class = "col-lg-2 d-flex justify-content-center align-items-center"><img [src]= "experiencia.imagen" alt="Icono experiencia" class = "img-thumbnail">
+          </div>
+          <div class = "col-lg-8" > 
+          <h4>{{experiencia.puesto}}</h4>
+            <p> Empresa - {{experiencia.empresa}}<br>Descripcion<br> {{experiencia.descripcion}}</p>
+            <h6 [ngStyle] = "{'font-size' : '1 em'}">Inicio {{experiencia.inicio | date:"dd/MM/yyyy"}} - Fin {{experiencia.fin  | date:"dd/MM/yyyy"}}</h6>
+          
+          </div>
+          <div class = "col-lg-2 order__button">
+              <!-- ediar -->
+            <button class = "button btn button__pencil" type="button" *ngIf="isLogged" (click)="toggleShowEditExp(experiencia.id)" ><i class="bi bi-pen-fill"></i></button>
+            <!-- borrar -->
+            <button class = "button btn button__pencil" type="button"  (click)="delete(experiencia.id)"><i class="bi bi-trash3-fill"></i></button>
+         </div> 
+      </div>
+  </div>
+  
+</div>
+
+
+

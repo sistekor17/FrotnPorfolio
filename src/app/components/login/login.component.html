@@ -1,0 +1,45 @@
+<!-- Section: Design Block -->
+<section class="text-center">
+  <!-- Background image -->
+  <div class="p-5 bg-image" style="
+        background-image: url('https://assets.bedu.org/images/top-lenguajes-programacion-2021.jpg?w=1200');
+        height: 300px;
+        "></div>
+  <!-- Background image -->
+  <hgroup >
+    <h1>LOGIN</h1>
+  </hgroup>
+
+  <form #f = "ngForm"
+        (ngSubmit) = "onLogin()" 
+        novalidate
+  > 
+
+    <div class="group">
+      <input 
+      type="text"
+      name="nombreUsuario"
+      id="nombreUsuario"
+      [(ngModel)] = "nombreUsuario" required  
+    />
+    <span class="highlight"></span><span class="bar"></span>
+    <label for = "nombreUsuario">Usuario</label>
+    </div>
+
+    <div class="group">
+
+      <input 
+      type ="password"
+      name ="password"  
+      id = "password"
+      [(ngModel)] = "password" required
+            
+      />
+      <span class="highlight"></span><span class="bar"></span>
+      <label for="password">Password</label>
+    </div>
+    <button type="submit" class="button buttonBlue">Ingresar
+      <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+    </button>
+  </form>
+

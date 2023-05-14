@@ -19,37 +19,37 @@
                     <!-- Empresa input -->
                     <div class="form-outline mb-4">
                       <label class="form-label" for="form6Example3">Empresa</label>
-                      <input type="text" name = "empresa" id="form6Example3" class="form-control" placeholder="Nombre de la empresa" [(ngModel)]="empresa"/>
+                      <input type="text" name = "empresa" id="form6Example3" class="form-control" placeholder="Nombre de la empresa" [value]="empresa" [(ngModel)]="empresa"/>
                       
                     </div>
                      <!-- Puesto input -->
                     <div class="form-outline mb-4">
                       <label class="form-label" for="form6Example3">Puesto de Trabajo</label>
-                      <input type="text"  name = "puesto" id="form6Example3" class="form-control" placeholder="Añada puesto de trabajo" [(ngModel)]="puesto" />  
+                      <input type="text"  name = "puesto" id="form6Example3" class="form-control" placeholder="Añada puesto de trabajo" [value]="puesto" [(ngModel)]="puesto" />  
                     </div> 
         
                     <!-- Inicio input -->
                     <div class="form-outline mb-4">
                       <label class="form-label" for="form6Example3">Inicio</label>
-                      <input type="text" name = "inicio" id="form6Example3" class="form-control" placeholder="aaaa-mm-dd" [(ngModel)]="inicio" />  
+                      <input type="text" name = "inicio" id="form6Example3" class="form-control" placeholder="aaaa-mm-dd" [value]="inicio" [(ngModel)]="inicio" />  
                     </div>
         
                     <!-- Fin input -->
                     <div class="form-outline mb-4">
                       <label class="form-label" for="form6Example3">Fin</label>
-                      <input type="text" name = "fin" id="form6Example3" class="form-control" placeholder="aaaa-mm-dd" [(ngModel)]="fin" />  
+                      <input type="text" name = "fin" id="form6Example3" class="form-control" placeholder="aaaa-mm-dd" [value]="fin" [(ngModel)]="fin" />  
                     </div>
                    <!-- Imagen input -->
                     <div class="form-outline mb-4">
                       <label class="form-label" for="form6Example3">Imagen</label>
-                      <input type="text" name = "imagen" id="form6Example3" class="form-control" placeholder="URl de de imagen o logo de la empresa" [(ngModel)]="imagen" /> {{imagen}}
+                      <input type="text" name = "imagen" id="form6Example3" class="form-control" placeholder="URl de de imagen o logo de la empresa" [value]="imagen" [(ngModel)]="imagen" /> 
                     </div>
                     
                     <!-- Descripcion input -->
                     <div class="form-outline mb-4">
                     <label class="form-label" for="form6Example7">
                      Descripcion de la experiencia laboral</label>
-                    <textarea class="form-control" id="form6Example7" rows="4" name =descripcion [(ngModel)]="descripcion"></textarea>
+                    <textarea class="form-control" id="form6Example7" rows="4" name =descripcion [value]="descripcion" [(ngModel)]="descripcion"></textarea>
                     </div>
                     
                     <input type = "submit" value="Editar"  class = "btn btn-outline-dark btn-lg">

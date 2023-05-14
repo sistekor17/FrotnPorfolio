@@ -3,7 +3,7 @@
     
     <div class="row gx-5">
       <div class="banner col-md-12 d-flex position-relative-center justify-content-center">
-        <img src="https://assets.bedu.org/images/top-lenguajes-programacion-2021.jpg?w=1200" class="img-fluid"  alt="Imagen Porfolio">    
+        <img [src]="persona.banner" class="img-fluid"  alt="Imagen Porfolio">    
      
       </div> 
     </div> 
@@ -20,15 +20,15 @@
         <div class="row gx-5">
           <div class="col-lg-5 justify-content-center position-relative borde__sombreado">
             <img src="assets\images\image_profile.jpg" alt="Foto perfil" class="img-fluid ">
-            <div class = "icon__potioner1 d-flex"><button class=" btn button__pencil" type="button" (click)="ontShowEditHeader()"><i class="bi bi-pen-fill"></i> </button></div> 
-            
             <h1 id="dev-name">{{persona.nombre}}</h1>
             <h2 id="dev-title">{{persona.titulo}}</h2>
-            <div class="badges__container"> 
+            <div class = "icon__potioner1"><button class=" btn button__pencil bi bi-pen-fill" type="button" (click)="ontShowEditHeader()" *ngIf="isLogged"></button></div> 
+            
+            <!-- <div class="badges__container"> 
               <span class="badge text-bg-secondary">Tengo interes en </span>
               <span class="badge text-bg-secondary">Añadir seccion</span>
               <span class="badge text-bg-secondary">Mas</span>
-            </div>
+            </div> -->
           </div>
           <div class="col-lg-7 cajas" >
             <div class="container borde__sombreado ps-5 pe-5">
@@ -41,19 +41,19 @@
               <div class="row gx-5">
                 <!-- <div class="col-lg-1"></div> -->
                 <div class="col-lg-12 col-sm-12d-flex justify-content-center align-items-center">
-                  <p class="text-wrap d-flex justify-content-between "> {{persona.sobreMi}} <button class = "button btn button__pencil" type="button" (click)="ontShowEditHeader()" ><i class="bi bi-pen-fill" ></i></button></p>
+                  <p class="text-wrap text-start"> {{persona.sobreMi}}</p>
                 </div>
                 <!-- <div class="col-lg-1"></div> -->
               </div>
             </div>
-            <div class="container borde__sombreadofilas">
+            <!-- <div class="container borde__sombreadofilas">
               <div class="row gx-5">
                 <div class="col-lg-12">
                   <p>Logos univercidades</p>
                   <div class="d-flex justify-content-end" ><button class = "button btn button__pencil" type="button"><i class="bi bi-pen-fill" (click)="ontShowEditHeader()"></i></button> </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

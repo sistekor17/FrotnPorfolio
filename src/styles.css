@@ -66,9 +66,11 @@ text-align: center;
   margin: 10px;
 }
 .icon__potioner1{
-  display:inline-block;
-  margin-left: 75%;
-  margin-top: -2em;
+  position: relative ;
+  display: inline-block;
+  margin-right: -30em;
+  
+  
 }
 .profileimage h1{
   padding-top: 170px;
